@@ -3,6 +3,18 @@
   background: var(--bg-primary);
   padding-top: 4rem;
   margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
 }
 
 .footer-content {
@@ -15,17 +27,18 @@
 }
 
 .footer-brand h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
 .footer-brand span {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
 }
 
 .footer-brand p {
   color: var(--text-secondary);
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .footer-links {
@@ -35,11 +48,29 @@
 
 .footer-links a {
   color: var(--text-secondary);
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--glass-border);
+  transition: var(--transition-smooth);
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition-smooth);
 }
 
 .footer-links a:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
   color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
 }
 
 .footer-bottom {

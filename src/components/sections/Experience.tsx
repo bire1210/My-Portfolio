@@ -1,4 +1,8 @@
+"use client";
+
 import './Experience.css';
+import { motion } from 'framer-motion';
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 export default function Experience() {
   const experiences = [
@@ -31,27 +35,50 @@ export default function Experience() {
   return (
     <section id="experience" className="section-wrapper">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up stagger-1">Experience</h2>
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, margin: "-100px" }}
+        >
+          <h2 className="section-title">Experience</h2>
+        </motion.div>
+        
         <div className="experience-timeline">
+          <div className="timeline-line"></div>
           {experiences.map((exp, index) => (
-            <div key={exp.title} className={`glass-panel experience-card animate-fade-in-up stagger-${(index % 4) + 1}`}>
-              <div className="experience-header">
-                <div>
-                  <h3 className="experience-title">{exp.title}</h3>
-                  <div className="experience-company">{exp.company}</div>
+            <motion.div 
+              key={exp.title}
+              className="experience-item"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+            >
+              <div className="timeline-dot"></div>
+              <div className="glass-panel experience-card">
+                <div className="experience-header">
+                  <div className="experience-header-main">
+                    <div className="experience-icon-wrapper">
+                      <Briefcase size={20} />
+                    </div>
+                    <div>
+                      <h3 className="experience-title">{exp.title}</h3>
+                      <div className="experience-company">{exp.company}</div>
+                    </div>
+                  </div>
+                  <div className="experience-meta">
+                    <span className="experience-period"><Calendar size={14}/> {exp.period}</span>
+                    <span className="experience-location"><MapPin size={14}/> {exp.location}</span>
+                  </div>
                 </div>
-                <div className="experience-meta">
-                  <span className="experience-period">{exp.period}</span>
-                  <span className="experience-location">{exp.location}</span>
+                <p className="experience-desc">{exp.description}</p>
+                <div className="experience-tech">
+                  {exp.techStack.map(tech => (
+                    <span key={tech} className="badge project-badge">{tech}</span>
+                  ))}
                 </div>
               </div>
-              <p className="experience-desc">{exp.description}</p>
-              <div className="experience-tech">
-                {exp.techStack.map(tech => (
-                  <span key={tech} className="badge">{tech}</span>
-                ))}
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

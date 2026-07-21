@@ -1,15 +1,18 @@
+"use client";
+
 import './Projects.css';
+import { motion } from 'framer-motion';
+import { CheckCircle2, FolderGit2 } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
     {
       title: "Volunteer Management System (Backend)",
-      description: "A scalable backend for coordinating volunteers, donors, and organizations built with .NET 10. Implements Clean Architecture and Domain-Driven Design (DDD). Uses the Repository Pattern and CQRS via MediatR to completely decouple database reads and writes. Engineered a cross-cutting validation behavior and result pattern for graceful failure states.",
+      description: "A scalable backend for coordinating volunteers, donors, and organizations built with .NET 10. Implements Clean Architecture and Domain-Driven Design (DDD). Uses the Repository Pattern and CQRS via MediatR to completely decouple database reads and writes.",
       highlights: [
         "Outbox Pattern for 100% data consistency",
         "MediatR Pipeline Behaviors & Fluent Validation",
         "Custom stateless JWT Authentication",
-        "Asynchronous background dispatcher",
         "Advanced Cryptography (Argon2id)"
       ],
       techStack: [".NET 10", "C#", "PostgreSQL", "Docker", "MediatR"]
@@ -27,20 +30,41 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="section-wrapper">
+    <section id="projects" className="section-wrapper projects-section">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up stagger-1">Projects & Architecture</h2>
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, margin: "-100px" }}
+        >
+          <h2 className="section-title">Projects & Architecture</h2>
+        </motion.div>
+        
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={project.title} className={`glass-panel project-card animate-fade-in-up stagger-${(index % 4) + 1}`}>
-              <h3 className="project-title">{project.title}</h3>
+            <motion.div 
+              key={project.title}
+              className="glass-panel project-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: index * 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="project-header">
+                <FolderGit2 className="project-icon" size={32} />
+                <h3 className="project-title">{project.title}</h3>
+              </div>
               <p className="project-desc">{project.description}</p>
               
               <div className="project-highlights">
-                <h4>Key Achivements:</h4>
+                <h4>Key Achievements:</h4>
                 <ul>
                   {project.highlights.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>
+                      <CheckCircle2 size={16} className="highlight-icon" />
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -50,7 +74,7 @@ export default function Projects() {
                   <span key={tech} className="badge project-badge">{tech}</span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
