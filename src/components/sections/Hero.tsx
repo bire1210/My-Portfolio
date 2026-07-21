@@ -67,14 +67,14 @@ export default function Hero() {
             whileHover={{ scale: 1.02, rotate: 1 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
-            <Image 
+            {/* <Image 
               src="/BG.JPG" 
               alt="BG" 
               width={400} 
               height={500} 
               className="hero-image"
               priority
-            />
+            /> */}
           </motion.div>
           {/* Floating tech badges */}
           <motion.div 
