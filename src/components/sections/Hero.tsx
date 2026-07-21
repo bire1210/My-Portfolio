@@ -68,7 +68,7 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
             <Image 
-              src="/BG.png" 
+              src="/BG.JPG" 
               alt="BG" 
               width={400} 
               height={400} 
