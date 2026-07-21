@@ -71,7 +71,7 @@ export default function Hero() {
               src="/BG.JPG" 
               alt="BG" 
               width={400} 
-              height={400} 
+              height={500} 
               className="hero-image"
               priority
             />
