@@ -33,6 +33,9 @@ export default function About() {
             <p className="about-text">
               I thrive on bridging the gap between exceptional UI/UX and resilient data infrastructure, routinely utilizing containerized deployments (Docker) to ensure scalable, maintainable, and production-ready systems.
             </p>
+            <p className="about-text">
+              I hold a degree in <strong>Computer Science and Engineering</strong> from <strong>Mekelle University - MIT</strong>, which laid the theoretical and practical foundation for my career in software architecture.
+            </p>
           </motion.div>
           
           <motion.div 
