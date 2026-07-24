@@ -23,8 +23,8 @@ export default function Hero() {
     <section id="hero" className="hero-section">
       <div className="hero-glow"></div>
       <div className="container hero-container">
-        
-        <motion.div 
+
+        <motion.div
           className="hero-content"
           variants={container}
           initial="hidden"
@@ -35,16 +35,16 @@ export default function Hero() {
               <span className="pulse-dot"></span> Available for new opportunities
             </span>
           </motion.div>
-          
+
           <motion.h1 variants={item} className="hero-title">
-            Engineering <br/>
+            Engineering <br />
             <span className="hero-highlight">Scalable Systems</span>.
           </motion.h1>
-          
+
           <motion.p variants={item} className="hero-subtitle">
             I am a Full-Stack Software Engineer bridging the gap between exceptional UI/UX and resilient data infrastructure. Specializing in Next.js and high-performance backend architectures.
           </motion.p>
-          
+
           <motion.div variants={item} className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               View My Work <ArrowRight size={18} />
@@ -55,29 +55,29 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="hero-image-wrapper"
           initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, type: "spring", delay: 0.3 }}
         >
           <div className="hero-image-backdrop"></div>
-          <motion.div 
+          <motion.div
             className="hero-image-container"
             whileHover={{ scale: 1.02, rotate: 1 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
-            {/* <Image 
-              src="/BG.JPG" 
-              alt="BG" 
-              width={400} 
-              height={500} 
+            <Image
+              src="/BG.JPG"
+              alt="BG"
+              width={400}
+              height={500}
               className="hero-image"
               priority
-            /> */}
+            />
           </motion.div>
           {/* Floating tech badges */}
-          <motion.div 
+          <motion.div
             className="floating-badge text-bold"
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -86,7 +86,7 @@ export default function Hero() {
             <Terminal size={16} className="text-accent" /> Next.js
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="floating-badge text-bold"
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
@@ -95,7 +95,7 @@ export default function Hero() {
             <Cloud size={16} className="text-accent" /> .NET 10
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="floating-badge text-bold"
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
@@ -104,7 +104,7 @@ export default function Hero() {
             <Database size={16} className="text-accent" /> PostgreSQL
           </motion.div>
         </motion.div>
-        
+
       </div>
     </section>
   );
