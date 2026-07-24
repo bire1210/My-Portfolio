@@ -9,15 +9,15 @@ export default function About() {
     <section id="about" className="section-wrapper about-section">
       <div className="container">
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="section-title">About Me</h2>
         </motion.div>
-        
+
         <div className="about-grid">
-          <motion.div 
+          <motion.div
             className="glass-panel about-content"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -34,11 +34,11 @@ export default function About() {
               I thrive on bridging the gap between exceptional UI/UX and resilient data infrastructure, routinely utilizing containerized deployments (Docker) to ensure scalable, maintainable, and production-ready systems.
             </p>
             <p className="about-text">
-              I hold a degree in <strong>Computer Science and Engineering</strong> from <strong>Mekelle University - MIT</strong>, which laid the theoretical and practical foundation for my career in software architecture.
+              I hold a <strong>Bachelor of Science</strong> degree in <strong>Computer Science and Engineering</strong> from <strong>Mekelle University - MIT</strong>, which laid the theoretical and practical foundation for my career in software architecture.
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="glass-panel about-highlights"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
