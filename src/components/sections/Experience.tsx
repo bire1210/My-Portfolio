@@ -11,24 +11,45 @@ export default function Experience() {
       company: "Niyat Consultancy",
       period: "Dec 2025 - Present",
       location: "Addis Ababa, Ethiopia · On-site",
-      description: "Developing a scalable multi-vendor eCommerce platform using Next.js. Supports multiple vendors managing their own products, orders, and storefronts within a unified system. Features include secure authentication, dynamic product filtering, and real-time data handling.",
-      techStack: ["Next.js", "Tailwind CSS", "React.js"]
+      description: "Developing a scalable multi-vendor eCommerce platform using Next.js. The application supports multiple vendors managing their own products, orders, and storefronts within a unified system.",
+      responsibilities: [
+        "Building a modern, high-performance web experience.",
+        "Developing secure authentication and dynamic product filtering.",
+        "Implementing real-time data handling and responsive UIs optimized for usability.",
+        "Focusing on clean architecture, efficient state management, and production-ready code."
+      ],
+      techStack: ["Next.js", "React", "Tailwind CSS", "REST APIs"]
     },
     {
       title: "Frontend Developer (Internship)",
       company: "Niyat Software Development Company",
       period: "Aug 2025 - Oct 2025",
-      location: "Remote",
-      description: "Developed responsive interfaces for Admin and Dispatcher modules of a Ride Hailing System using React.js. Implemented features for driver management, ride monitoring, trip assignment, and operational dashboards integrated with RESTful APIs.",
-      techStack: ["React.js", "JavaScript", "REST APIs"]
+      location: "Addis Ababa, Ethiopia",
+      description: "Developed responsive and user-friendly interfaces for the Admin and Dispatcher modules of a Ride Hailing System.",
+      responsibilities: [
+        "Implemented features for driver management, ride monitoring, trip assignment, customer management, and operational dashboards.",
+        "Integrated frontend applications with RESTful APIs to display and manage real-time ride and driver data.",
+        "Built reusable UI components and managed application state to improve maintainability and scalability.",
+        "Collaborated with backend developers and designers to deliver efficient workflows for transportation operations.",
+        "Optimized application performance and ensured a seamless user experience across different devices and screen sizes."
+      ],
+      techStack: ["React.js", "JavaScript", "REST APIs", "State Management"]
     },
     {
       title: "React.js Frontend Developer (Internship)",
       company: "Sheqlee – Freelance Marketplace Platform",
       period: "Nov 2024 - Mar 2025",
       location: "Mekelle",
-      description: "Built responsive, reusable UI components for a freelance marketplace connecting clients and freelancers. Implemented authentication flows, job posting/search with pagination, proposal management pages, and integrated APIs via Axios.",
-      techStack: ["React.js", "Redux Toolkit", "React Router", "Axios", "CSS3"]
+      description: "Collaborated with a team to build responsive, reusable, and scalable user interfaces for a full-stack freelance marketplace platform inspired by Upwork, connecting clients with freelancers.",
+      responsibilities: [
+        "Developed reusable React components for improved maintainability.",
+        "Implemented client-side routing with React Router and managed application state using Redux Toolkit.",
+        "Integrated REST APIs using Axios/Fetch, working closely with backend developers.",
+        "Implemented authentication flow (Login, Register, Protected Routes).",
+        "Created job posting, job listing, and proposal management pages.",
+        "Fixed bugs, optimized application performance, and ensured cross-browser compatibility."
+      ],
+      techStack: ["React.js", "Redux Toolkit", "React Router", "Axios", "CSS3", "HTML5"]
     }
   ];
 
@@ -47,7 +68,7 @@ export default function Experience() {
           <div className="timeline-line"></div>
           {experiences.map((exp, index) => (
             <motion.div 
-              key={exp.title}
+              key={exp.title + index}
               className="experience-item"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -72,6 +93,13 @@ export default function Experience() {
                   </div>
                 </div>
                 <p className="experience-desc">{exp.description}</p>
+                {exp.responsibilities && (
+                  <ul className="experience-responsibilities">
+                    {exp.responsibilities.map((resp, i) => (
+                      <li key={i}>{resp}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="experience-tech">
                   {exp.techStack.map(tech => (
                     <span key={tech} className="badge project-badge">{tech}</span>

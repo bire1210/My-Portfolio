@@ -2,24 +2,29 @@
 
 import './Skills.css';
 import { motion } from 'framer-motion';
-import { Layers, TerminalSquare, DatabaseZap } from 'lucide-react';
+import { Layers, TerminalSquare, DatabaseZap, Sparkles } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
     {
       title: "Frontend Engineering",
       icon: <Layers size={24} />,
-      skills: ["Next.js", "React.js", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "Vanilla CSS", "Redux Toolkit", "Zustand", "React Query"]
+      skills: ["Next.js", "React.js", "Angular", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "Responsive Design"]
     },
     {
       title: "Backend & Systems",
       icon: <TerminalSquare size={24} />,
-      skills: ["C#", ".NET 10", "Node.js", "Express.js", "REST APIs", "Clean Architecture", "CQRS", "Domain-Driven Design (DDD)"]
+      skills: ["C#", ".NET ASP Core", "Node.js", "Express", "REST APIs", "Clean Architecture", "CQRS", "Domain-Driven Design"]
     },
     {
       title: "Database & DevOps",
       icon: <DatabaseZap size={24} />,
-      skills: ["PostgreSQL", "MongoDB", "Entity Framework", "Docker", "Git", "GitHub"]
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Docker", "Git", "Entity Framework"]
+    },
+    {
+      title: "Creative & AI",
+      icon: <Sparkles size={24} />,
+      skills: ["AI & Machine Learning", "Graphic Design", "Video Editing", "UI/UX"]
     }
   ];
 

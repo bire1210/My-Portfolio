@@ -94,9 +94,22 @@
 
 .experience-desc {
   color: var(--text-secondary);
-  line-height: 1.7;
-  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.experience-responsibilities {
+  list-style: disc;
+  padding-left: 1.25rem;
   margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.experience-responsibilities li {
+  margin-bottom: 0.5rem;
 }
 
 .experience-tech {
