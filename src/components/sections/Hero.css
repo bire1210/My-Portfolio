@@ -114,6 +114,7 @@
 }
 
 .hero-image-container {
+  position: relative;
   border-radius: 2rem;
   overflow: hidden;
   border: 1px solid var(--glass-border);

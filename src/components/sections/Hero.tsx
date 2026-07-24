@@ -70,9 +70,8 @@ export default function Hero() {
             <Image
               src="/BG.JPG"
               alt="BG"
-              width={400}
-              height={400}
-              className="object-contain"
+              fill
+              style={{ objectFit: 'contain' }}
               priority
             />
           </motion.div>
