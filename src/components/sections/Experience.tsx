@@ -7,18 +7,17 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 export default function Experience() {
   const experiences = [
     {
-      title: "Full-Stack Software Engineer",
+      title: "Full-Stack Engineer (Multi-Vendor Ecommerce Application)",
       company: "Niyat Consultancy",
       period: "Dec 2025 - Present",
       location: "Addis Ababa, Ethiopia · On-site",
-      description: "Developing a scalable multi-vendor eCommerce platform using Next.js. The application supports multiple vendors managing their own products, orders, and storefronts within a unified system.",
+      description: "Developing a scalable multi-vendor eCommerce platform using Next.js, focused on building a modern, high-performance web experience.",
       responsibilities: [
-        "Building a modern, high-performance web experience.",
-        "Developing secure authentication and dynamic product filtering.",
-        "Implementing real-time data handling and responsive UIs optimized for usability.",
-        "Focusing on clean architecture, efficient state management, and production-ready code."
+        "Engineered a unified system supporting multiple vendors managing their own products, orders, and storefronts.",
+        "Implemented core features including secure authentication, dynamic product filtering, and real-time data handling.",
+        "Built a highly responsive UI optimized for maximum performance, clean architecture, and efficient state management."
       ],
-      techStack: ["Next.js", "React", "Tailwind CSS", "REST APIs"]
+      techStack: ["Next.js", "Tailwind CSS", "React", "Architecture"]
     },
     {
       title: "Frontend Developer (Internship)",
