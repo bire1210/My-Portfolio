@@ -15,9 +15,10 @@ export default function Experience() {
       responsibilities: [
         "Engineered a unified system supporting multiple vendors managing their own products, orders, and storefronts.",
         "Implemented core features including secure authentication, dynamic product filtering, and real-time data handling.",
-        "Built a highly responsive UI optimized for maximum performance, clean architecture, and efficient state management."
+        "Built a highly responsive UI optimized for maximum performance, clean architecture, and efficient state management.",
+        "Leveraged a monorepository architecture to streamline code sharing, simplify dependency management, and enhance overall development efficiency."
       ],
-      techStack: ["Next.js", "Tailwind CSS", "React", "Architecture"]
+      techStack: ["Next.js", "Tailwind CSS", "React.js", "React query"]
     },
     {
       title: "Frontend Developer (Internship)",
@@ -32,7 +33,7 @@ export default function Experience() {
         "Collaborated with backend developers and designers to deliver efficient workflows for transportation operations.",
         "Optimized application performance and ensured a seamless user experience across different devices and screen sizes."
       ],
-      techStack: ["React.js", "JavaScript", "REST APIs", "State Management"]
+      techStack: ["React.js", "JavaScript", "REST APIs", "Redux toolkit"]
     },
     {
       title: "React.js Frontend Developer (Internship)",
@@ -56,17 +57,17 @@ export default function Experience() {
     <section id="experience" className="section-wrapper">
       <div className="container">
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="section-title">Experience</h2>
         </motion.div>
-        
+
         <div className="experience-timeline">
           <div className="timeline-line"></div>
           {experiences.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={exp.title + index}
               className="experience-item"
               initial={{ opacity: 0, x: -30 }}
@@ -87,8 +88,8 @@ export default function Experience() {
                     </div>
                   </div>
                   <div className="experience-meta">
-                    <span className="experience-period"><Calendar size={14}/> {exp.period}</span>
-                    <span className="experience-location"><MapPin size={14}/> {exp.location}</span>
+                    <span className="experience-period"><Calendar size={14} /> {exp.period}</span>
+                    <span className="experience-location"><MapPin size={14} /> {exp.location}</span>
                   </div>
                 </div>
                 <p className="experience-desc">{exp.description}</p>
